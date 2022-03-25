@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    background: #e7edf2 url("../images/vector1.png") no-repeat fixed -70px -70px;
+    background-size: 200px auto;
+    width: 100%
+}
+
+.main,
+.form {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 30px;
+    justify-items: center;
+    padding: 50px 20px;
+    overflow: hidden
+}
+
+.vector2 {
+    width: 300px;
+    height: auto
+}
+
+.form {
+    padding: 5px 0px
+}
+
+.form input {
+    width: 500px;
+    height: auto;
+    padding: 15px 20px;
+    background: #caebbb;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px
+}
+
+.pass {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 30px
+}
+
+#passkey,
+#confirmkey {
+    padding-right: 40px;
+    width: calc(100% -40px)
+}
+
+.pass img {
+    position: absolute;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 465px;
+    cursor: pointer
+}
+
+#submit {
+    background: #006bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold
+}
+
+#createAcc {
+    color: #000;
+    font-size: 15px;
+    width: 100%;
+    text-align: center
+}
+
+#createAcc a {
+    text-decoration: none;
+    color: #006bff;
+    font-weight: bold
+}
+
+.alert {
+    background: rgb(255, 197, 164);
+    width: 500px;
+    margin: auto;
+    height: fit-content;
+    padding: 10px 20px;
+    color: grey;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: auto 30px;
+    justify-items: ;
+    align-items: flex-start;
+    grid-column-gap: 20px;
+    border: solid 2px rgb(240, 159, 159);
+}
+
+#closebtn {
+    background-color: transparent;
+    color: red;
+    float: right;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .form input,
+    .alert,
+    .pass {
+        width: 90%
+    }
+    .pass {
+        padding: 0;
+        margin: auto
+    }
+    .pass #passkey,
+    .pass #confirmkey {
+        width: 100%
+    }
+    .pass img {
+        right: calc(10% + 10px)
+    }
+}

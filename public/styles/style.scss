@@ -1,0 +1,128 @@
+$color1: #86F29E;
+$color2: #A0FD89;
+$color3: #E7EDF2;
+$color4: #CAEBBB;
+$color5: #006BFF;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: $color3 url("../images/vector1.png") no-repeat fixed -70px -70px;
+    background-size: 200px auto;
+    width: 100%;
+}
+
+.main,
+.form {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 30px;
+    justify-items: center;
+    padding: 50px 20px;
+    overflow: hidden;
+}
+
+.vector2 {
+    width: 300px;
+    height: auto;
+}
+
+.form {
+    padding: 5px 0px;
+}
+
+.form input {
+    width: 500px;
+    height: auto;
+    padding: 15px 20px;
+    background: $color4;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px;
+    // box-shadow: 2px 2px 0px 1px grey;
+    // font-weight: bold;
+}
+
+// .form #fname::placeholder, #email::placeholder{
+//     color: black;
+//     opacity: 1;
+// }
+.pass {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 30px;
+}
+
+#passkey,
+#confirmkey {
+    padding-right: 40px;
+    width: calc(100% -40px);
+}
+
+.pass img {
+    position: absolute;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 465px;
+    cursor: pointer;
+}
+
+#submit {
+    background: $color5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#createAcc {
+    color: black;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+#createAcc a {
+    text-decoration: none;
+    color: $color5;
+    font-weight: bold;
+}
+
+.alert {
+    background: rgb(255, 197, 164);
+    width: 500px;
+    margin: auto;
+    height: fit-content;
+    padding: 10px 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .form input,
+    .pass {
+        width: 90%;
+    }
+    .pass {
+        padding: 0;
+        margin: auto;
+        #passkey,
+        #confirmkey {
+            width: 100%;
+        }
+        img {
+            right: calc(10% + 10px);
+        }
+    }
+}
+
+
+}
+
+}

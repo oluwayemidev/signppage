@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+
+        <h1>Create Account</h1>
+
+        <img src="../images/vector2.png" alt="" class="vector2">
+
+
+        <% if(typeof alert != 'undefined') { %>
+            <% alert.forEach(function(error) { %>
+                <div class="alert" id="alert">
+                    <span><%= error.msg %></span>
+                    <button id="closebtn" onclick="this.parentElement.style.display = 'none';"> &times; </button>
+                </div>
+                <% }) %>
+                    <% } %>
+
+                        <form action="/" method="post" class="form" id="form">
+                            <input type="text" name="fname" id="fname" placeholder="Full Name" value="<% if(typeof userData !='undefined'){%><%= userData.fname.toString().trim(); %><%}%>">
+
+                            <input type="email" name="email" id="email" placeholder="Email Address" value="<% if(typeof userData !='undefined'){%><%= userData.email.toString().trim(); %><%}%>">
+                            <div class="pass">
+                                <img src="../images/invisibleeye.png" alt="" onclick="togglePassKey()" id="eye">
+                                <input type="password" name="passkey" id="passkey" placeholder="Password">
+                            </div>
+                            <div class="pass">
+                                <img src="../images/invisibleeye.png" alt="" onclick="toggleConfirmKey()" id="eye2">
+                                <input type="password" name="confirmkey" id="confirmkey" placeholder="Confirm Password">
+                            </div>
+                            <input type="submit" name="submit" id="submit" value="Create Account" onclick="loadError()" onclick="validateForm()">
+                        </form>
+                        <div id="createAcc">Already Have An Account? <a href="">Sign in</a></div>
+    </div>
+</body>
+
+</html>
+
+</html>
